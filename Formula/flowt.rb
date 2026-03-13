@@ -1,7 +1,7 @@
 class Flowt < Formula
   desc "A terminal workflow automation engine"
   homepage "https://github.com/schmidt-gabriel/flowt"
-  version "0.1.0"
+  version "v0.1.0-beta.1"
 
   on_macos do
     on_arm do
