@@ -1,7 +1,7 @@
 class Rdu < Formula
   desc "A terminal disk usage analyzer written in Rust"
   homepage "https://github.com/schmidt-gabriel/rdu"
-  version "0.1.0-beta"
+  version "0.1.0"
 
   on_macos do
     on_arm do
