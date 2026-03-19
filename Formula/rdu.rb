@@ -1,4 +1,4 @@
-class rdu < Formula
+class Rdu < Formula
   desc "A terminal disk usage analyzer written in Rust"
   homepage "https://github.com/schmidt-gabriel/rdu"
   version "0.1.0-beta"
