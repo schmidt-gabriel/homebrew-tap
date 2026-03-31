@@ -18,12 +18,12 @@ class Rdu < Formula
   on_linux do
     on_arm do
       url "https://github.com/schmidt-gabriel/rdu/releases/download/v#{version}/rdu-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "76ea0108148607383b2b0f5898cfa968f410a01f51430e50c0231b17a9099fbf"
+      sha256 "fd6e53892e12856913c2a1548ab210ca81e2672ed670bbc0c39a87176d7049e2"
     end
 
     on_intel do
       url "https://github.com/schmidt-gabriel/rdu/releases/download/v#{version}/rdu-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "9affae2f64b2591cef2caa1b659db811c378f2196dba3399d2389c0149be1993"
+      sha256 "76ea0108148607383b2b0f5898cfa968f410a01f51430e50c0231b17a9099fbf"
     end
   end
 
