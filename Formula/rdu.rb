@@ -1,24 +1,24 @@
 class Rdu < Formula
   desc "A terminal disk usage analyzer written in Rust"
   homepage "https://github.com/schmidt-gabriel/rdu"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     on_arm do
       url "https://github.com/schmidt-gabriel/rdu/releases/download/v#{version}/rdu-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "ea8a428efe9ac2088cde2a69128299ca4f6be5159e97b957268c561601d86824"
+      sha256 "0e76af36f0358864e15b419d587a58e89d94411ad53df0cc6da4d65029b6f226"
     end
 
     on_intel do
       url "https://github.com/schmidt-gabriel/rdu/releases/download/v#{version}/rdu-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "3fb72991660ec3a90fc59b361d4b226c3e5e681801adff4731f1bab97198aede"
+      sha256 "1db08f92d85c4927f4c1f437e9c544951b1cbd450288f4836fef27360ad450a2"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/schmidt-gabriel/rdu/releases/download/v#{version}/rdu-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "6d744ed549e01dd6bd0123aded4094970146900df0a6299108ec04dcad7dbcde"
+      sha256 "76ea0108148607383b2b0f5898cfa968f410a01f51430e50c0231b17a9099fbf"
     end
 
     on_intel do
