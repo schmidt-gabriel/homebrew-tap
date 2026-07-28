@@ -7,7 +7,7 @@ cask "homesync" do
   desc "Menu bar client for syncing files with your own HomeSync server"
   homepage "https://github.com/schmidt-gabriel/homesync"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "HomeSync.app"
 
@@ -25,14 +25,14 @@ cask "homesync" do
 
   caveats <<~EOS
     HomeSync is not signed with an Apple Developer ID, so macOS quarantines it
-    and Gatekeeper refuses the first launch. Install without the quarantine
-    flag:
-
-      brew install --cask --no-quarantine homesync
-
-    Or clear it afterwards:
+    and Gatekeeper refuses the first launch. Clear the flag:
 
       xattr -dr com.apple.quarantine /Applications/HomeSync.app
+
+    To skip quarantine at install time instead, note that --no-quarantine is
+    no longer a command-line flag; it is read from the environment:
+
+      HOMEBREW_CASK_OPTS="--no-quarantine" brew install --cask homesync
 
     The synced folder and the device token are left alone by `brew uninstall`.
     Use `brew uninstall --zap homesync` to remove the app's settings too; that
