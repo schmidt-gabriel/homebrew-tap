@@ -24,15 +24,16 @@ cask "homesync" do
       launchctl: "dev.schmidt.HomeSync"
 
   caveats <<~EOS
-    HomeSync is not signed with an Apple Developer ID, so macOS quarantines it
-    and Gatekeeper refuses the first launch. Clear the flag:
+    HomeSync is not signed with an Apple Developer ID, so macOS attaches a
+    quarantine flag to it. Clear it once:
 
       xattr -dr com.apple.quarantine /Applications/HomeSync.app
 
-    To skip quarantine at install time instead, note that --no-quarantine is
-    no longer a command-line flag; it is read from the environment:
+    (--no-quarantine is not a command-line flag on current Homebrew, and
+    setting it through HOMEBREW_CASK_OPTS did not stop the flag being applied
+    either, so the command above is the reliable route.)
 
-      HOMEBREW_CASK_OPTS="--no-quarantine" brew install --cask homesync
+    Signing it properly needs a paid Apple Developer account.
 
     The synced folder and the device token are left alone by `brew uninstall`.
     Use `brew uninstall --zap homesync` to remove the app's settings too; that
