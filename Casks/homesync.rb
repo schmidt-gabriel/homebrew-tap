@@ -1,6 +1,6 @@
 cask "homesync" do
-  version "1.3.1"
-  sha256 "588178fa27533578cf5c4258661f163afb4b19c1af13b9c658a504eb0f589b7d"
+  version "1.3.2"
+  sha256 "9b6521938a1fe73ff245e683f30a50dd0cb467fb13180c33f84c90aaf52459ea"
 
   url "https://github.com/schmidt-gabriel/homesync/releases/download/v#{version}/HomeSync.zip"
   name "HomeSync"
