@@ -4,25 +4,25 @@ cask "sudo-ku" do
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/sudo-ku"], must_succeed: false
   end
 
-  version "0.1.1"
+  version "0.2.0"
 
   on_macos do
     on_arm do
-      sha256 "235fc84e5b306efc1cad6374518d18b24394228f029c522a4399f6a9181bd244"
+      sha256 "afad02b20fc2a830bd24673895e905c7a79b091a268c53070bbbefc855d1b92f"
       url "https://github.com/schmidt-gabriel/sudo-ku/releases/download/v#{version}/sudo-ku_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "63e4de39b075cea7a5287601a9d9ec84022195f88fff8f2a54624dd1f788d598"
+      sha256 "d74d01fcfe4c331d97709ebe9c1d2069bfe18ec63d1e9863ce5e83df66a3935e"
       url "https://github.com/schmidt-gabriel/sudo-ku/releases/download/v#{version}/sudo-ku_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "a32eeffcffd05417b59c6c3385557ebcbc01a9964dc74f3dd3a1e7c8b6d7a770"
+      sha256 "0d8623d77fc1b7fb3bf303e88d078f1449fe045ee2d1f38eb6c1f2cb3874f6fc"
       url "https://github.com/schmidt-gabriel/sudo-ku/releases/download/v#{version}/sudo-ku_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "788ecad7762786d1df2bf2e1cbac308112ec44a19524dc24e4d9ed45a26f520a"
+      sha256 "09c6aeb2495363b02ca83316baf8a5c2cfbc5ccdf49e8f160a8313d2c1fb7d86"
       url "https://github.com/schmidt-gabriel/sudo-ku/releases/download/v#{version}/sudo-ku_#{version}_linux_amd64.tar.gz"
     end
   end
